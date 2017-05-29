@@ -29,9 +29,10 @@ while response == "Y" or restart == "Y":
         guess_raw = input("Enter guess > ")
         try:
             guess = int(guess_raw)
-            bad_input = 0
         except ValueError:
             print("That is not an integer! Try again!")
+        except:
+            bad_input = 0
 
     if guess == rand_num:
         print("")
